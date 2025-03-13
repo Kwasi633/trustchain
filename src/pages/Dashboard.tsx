@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, CircularProgress } from '@mui/material';
+import TrustScoreBreakdown from '../components/TrustScoreBreakdown';
 
 export default function Dashboard() {
   const [trustScore, setTrustScore] = useState<number | null>(null);
 
   useEffect(() => {
-    // Simulate fetching the trust score
     setTimeout(() => {
       setTrustScore(82);
     }, 2000);
@@ -22,7 +22,10 @@ export default function Dashboard() {
         Your TrustChain Score
       </Typography>
       {trustScore !== null ? (
-        <Typography variant="h1">{trustScore}/100</Typography>
+        <>
+          <Typography variant="h1">{trustScore}/100</Typography>
+          <TrustScoreBreakdown />
+        </>
       ) : (
         <CircularProgress color="inherit" />
       )}

@@ -17,7 +17,7 @@ export default function Home() {
         TrustChain: Decentralized Reputation for Web3
       </Typography>
       <Typography variant="h6" gutterBottom>
-        Verify, Trust & Build on-chain credibility with AI-powered scoring.
+        Verify, trust & build on-chain credibility with AI-powered scoring.
       </Typography>
       <Button
         variant="contained"
