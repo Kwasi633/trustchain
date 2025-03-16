@@ -1,3 +1,3 @@
 # ICP Akwaaba Hackathon
 
-TrustChain: Decentralized Reputation for Web3
+TrustChain: Decentralized Reputation for Web3`
