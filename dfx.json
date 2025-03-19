@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "trustchain_backend": {
+      "main": "src/trustchain_backend/main.mo",
+      "type": "motoko"
+    },
+    "trustchain_frontend": {
+      "dependencies": [
+        "trustchain_backend"
+      ],
+      "source": [
+        "src/trustchain_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "trustchain_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
