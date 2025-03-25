@@ -28,7 +28,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Alert from '@mui/material/Alert';
 
-import './App.css'; // Custom styles
+import './App.css'; 
 
 // ---------------------
 // Header Component
