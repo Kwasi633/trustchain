@@ -8,3 +8,9 @@ Trustchain is a decentralized reputation layer built exclusively on ICP’s 
 - Chain-key reputation passport
 - Reverse gas + internet identity sybil resistance
 - Reputation Staking for Programmable Liquidity
+
+**Stack**
+- Rust
+- Mokoto
+- ICP Canister
+- ReactJS
