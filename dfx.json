@@ -2,7 +2,22 @@
   "canisters": {
     "trustchain_backend": {
       "main": "src/trustchain_backend/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "gzip": true,
+      "remote": {
+        "declarations": {
+          "node_compatibility": true
+        },
+        "http_request": true,
+        "dependencies": [],
+        "optimize": "cycles",
+        "id": {
+          "ic": "b77ix-eeaaa-aaaaa-qaada-cai"
+        }
+      },
+      "http_outcalls": {
+        "urls": ["https://75b0-154-161-131-190.ngrok-free.app/update_reputation_score"]
+      }
     },
     "trustchain_frontend": {
       "dependencies": [

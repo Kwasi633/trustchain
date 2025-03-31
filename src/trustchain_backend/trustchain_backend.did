@@ -1,0 +1,3 @@
+service : {
+  updateReputationScore : (github_handle: text, eth_address: text) -> (float64, text);
+}
