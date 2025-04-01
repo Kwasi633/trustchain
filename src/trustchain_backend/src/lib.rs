@@ -132,7 +132,7 @@ async fn fetch_github_data(handle: String) -> (f64, f64, String, String) {
 /// Only transactions from the last 90 days are considered.
 #[update]
 async fn fetch_defi_data(eth_address: String) -> (u64, String) {
-    let api_key = "YZYRG3W3XXVWKGCD6G7C7YQ1XSZEZVWEN6";
+    let api_key = "ETHERSCAN_API_KEY";
     let url = format!(
         "https://api.etherscan.io/api?module=account&action=txlist&address={}&startblock=0&endblock=99999999&sort=asc&apikey={}",
         eth_address, api_key
