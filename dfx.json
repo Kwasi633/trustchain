@@ -1,9 +1,12 @@
 {
   "canisters": {
     "trustchain_backend": {
-      "main": "src/trustchain_backend/main.mo",
-      "type": "motoko",
+      "main": "src/trustchain_backend/src/lib.rs",
+      "type": "rust",
+      "package": "trustchain_backend",
+      "root": "src/trustchain_backend",
       "gzip": true,
+      "candid": "src/trustchain_backend/trustchain_backend.did",
       "remote": {
         "declarations": {
           "node_compatibility": true
@@ -16,7 +19,9 @@
         }
       },
       "http_outcalls": {
-        "urls": ["https://75b0-154-161-131-190.ngrok-free.app/update_reputation_score"]
+        "urls": [
+          "https://75b0-154-161-131-190.ngrok-free.app/update_reputation_score"
+        ]
       }
     },
     "trustchain_frontend": {

@@ -1,3 +1,7 @@
 service : {
-  updateReputationScore : (github_handle: text, eth_address: text) -> (float64, text);
+  "calculate_reputation" : (vec float32) -> (float64);
+  "get_reputation" : (principal) -> (float64) query;
+  "update_reputation_score" : (text, text) -> (float64, text);
+  "fetch_github_data" : (text) -> (float64, float64, text, text);
+  "fetch_defi_data" : (text) -> (nat64, text);
 }

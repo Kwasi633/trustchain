@@ -29,8 +29,6 @@ import './App.css';
 
 // Lazy load components for code splitting
 const Dashboard = lazy(() => import('./components/Dashboard'));
-const StakeComponent = lazy(() => import('./components/Stake'));
-const ActivityComponent = lazy(() => import('./components/Activity'));
 const ReputationForm = lazy(() => import('./components/ReputationForm'));
 
 class ErrorBoundary extends React.Component {
@@ -155,8 +153,6 @@ function CustomTabs({ activeTab, setActiveTab }) {
     <Box sx={{ borderBottom: 1, borderColor: 'divider', px: { xs: 0, sm: 2 } }}>
       <Tabs value={activeTab} onChange={handleChange} indicatorColor="primary" textColor="primary" variant="fullWidth" aria-label="application tabs">
         <Tab icon={<DashboardIcon />} iconPosition="start" label="Dashboard" value="dashboard" aria-label="dashboard tab" />
-        <Tab icon={<LocalAtmIcon />} iconPosition="start" label="Stake" value="stake" aria-label="stake tab" />
-        <Tab icon={<HistoryIcon />} iconPosition="start" label="Activity" value="activity" aria-label="activity tab" />
         <Tab icon={<InfoIcon />} iconPosition="start" label="Calculate" value="calculate" aria-label="calculate reputation tab" />
       </Tabs>
     </Box>

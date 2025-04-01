@@ -11,9 +11,8 @@ function ReputationForm({ onUpdate }) {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      // Call the backend API that calculates reputation.
-      // It returns a tuple: [score: float64, message: string]
-      const response = await trustchain_backend.updateReputationScore(githubHandle, ethAddress);
+      // Call the backend API with the correct function name.
+      const response = await trustchain_backend.update_reputation_score(githubHandle, ethAddress);
       setResult(response);
       if (onUpdate) {
         onUpdate(response);
@@ -43,18 +42,22 @@ function ReputationForm({ onUpdate }) {
           onChange={(e) => setEthAddress(e.target.value)}
           required
         />
-        <Button variant="contained" color="primary" onClick={handleSubmit} disabled={loading || !githubHandle || !ethAddress}>
+        <Button 
+          variant="contained" 
+          color="primary" 
+          onClick={handleSubmit} 
+          disabled={loading || !githubHandle || !ethAddress}
+        >
           {loading ? <CircularProgress size={20} color="inherit" /> : 'Calculate Reputation'}
         </Button>
       </Box>
       {result && (
         <Box mt={2}>
-          <Typography variant="body1">{result[1]}</Typography>
-          <Typography variant="caption">Score: {result[0]}</Typography>
+          {/* <Typography variant="caption">Score from backend is: {result[0]}</Typography> */}
         </Box>
       )}
     </Paper>
   );
 }
 
-export default ReputationForm;
+export default ReputationForm; 
