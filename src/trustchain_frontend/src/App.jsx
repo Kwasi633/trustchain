@@ -18,9 +18,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import HistoryIcon from '@mui/icons-material/History';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import CloseIcon from '@mui/icons-material/Close';
 import InfoIcon from '@mui/icons-material/Info';
 
@@ -105,10 +103,6 @@ function Header({ isConnected, currentUser, userScore, onConnect, onDisconnect, 
             </Tooltip>
             <Box sx={{ mr: 2, textAlign: 'right', display: { xs: 'none', sm: 'block' } }}>
               <Typography variant="body2">{currentUser}</Typography>
-              <Typography variant="caption" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                <VerifiedUserIcon sx={{ fontSize: 16, mr: 0.5, color: 'success.main' }} />
-                Reputation: {userScore}
-              </Typography>
             </Box>
             <Button variant="outlined" color="inherit" onClick={onDisconnect} size="small" startIcon={<CloseIcon />}>
               Disconnect
@@ -176,7 +170,7 @@ function Welcome({ isLoading, handleConnect }) {
           Welcome to TrustChain
         </Typography>
         <Typography variant="subtitle1" gutterBottom color="text.secondary">
-          Unifying on‑chain and off‑chain trust via our Rust‑powered ML model.
+          Unifying trust in Web3.
         </Typography>
         <Divider sx={{ my: 3 }} />
         <Paper variant="outlined" sx={{ p: 2, mb: 3, textAlign: 'left' }}>
@@ -186,8 +180,8 @@ function Welcome({ isLoading, handleConnect }) {
                 <CheckCircleIcon color="success" />
               </ListItemIcon>
               <ListItemText
-                primary="Rust-powered AI Inference"
-                secondary="Integrates on‑chain transactions with off‑chain GitHub & DeFi data."
+                primary="On-Chain AI inference through canisters"
+                secondary="Integration of on-chain transactions and off-chain contributions"
               />
             </ListItem>
             <ListItem>
@@ -195,8 +189,8 @@ function Welcome({ isLoading, handleConnect }) {
                 <CheckCircleIcon color="success" />
               </ListItemIcon>
               <ListItemText
-                primary="Real‑time HTTPS Outcalls"
-                secondary="Fetches verified off‑chain data to inform trust scoring."
+                primary="Real-time HTTPS Outcalls"
+                secondary="Verified off-chain data from GitHub"
               />
             </ListItem>
             <ListItem>
@@ -205,7 +199,7 @@ function Welcome({ isLoading, handleConnect }) {
               </ListItemIcon>
               <ListItemText
                 primary="Comprehensive Reputation Calculation"
-                secondary="Weighted scoring using on‑chain pushes & off‑chain contributions."
+                secondary="Real-time scoring using on-chain Defi transactions & off-chain contributions."
               />
             </ListItem>
             <ListItem>
@@ -214,7 +208,7 @@ function Welcome({ isLoading, handleConnect }) {
               </ListItemIcon>
               <ListItemText
                 primary="Seamless dApp Integration"
-                secondary="APIs designed for interoperability across ICP and beyond."
+                secondary="Trustchain API is designed for interoperability across ICP and beyond."
               />
             </ListItem>
             <ListItem>
@@ -223,7 +217,7 @@ function Welcome({ isLoading, handleConnect }) {
               </ListItemIcon>
               <ListItemText
                 primary="Reverse Gas + Internet Identity"
-                secondary="Fee‑free interactions with robust sybil resistance."
+                secondary="Fee-free interactions with robust sybil resistance."
               />
             </ListItem>
           </List>
